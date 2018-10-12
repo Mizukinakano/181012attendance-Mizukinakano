@@ -5,9 +5,11 @@ Spyderエディタ
 これは一時的なスクリプトファイルです
 """
 
-print(2*4)
 def fib(n):
-    a0=0
-    a1=1
-    a2=a1+a0
-    return a2
+    a,b=0,1
+    for i in range (n):
+        a,b=b,a+b
+    return b
+print([fib(i) for i in range(10)])
+
+print("フィボナッチ数列の2018番目は" + str(fib(2018)) + "です。")
